@@ -1,0 +1,142 @@
+@mixin background-properties {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin _1440 {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin _1200 {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin _1024 {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin _991 {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin _768 {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin _650 {
+    @media (max-width: 650px) {
+        @content;
+    }
+}
+
+@mixin _468 {
+    @media (max-width: 468px) {
+        @content;
+    }
+}
+
+@mixin container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @include _1440 {
+        max-width: 100%;
+        padding: 0 60px;
+    }
+
+    @include _991 {
+        max-width: 100%;
+        padding: 0 40px;
+    }
+
+    @include _650 {
+        max-width: 100%;
+        padding: 0 25px;
+    }
+}
+
+@mixin inner {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+@mixin inner-flex {
+    max-width: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+@mixin Verdana-bold {
+    font-family: "Verdana-bold";
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin Verdana-regular {
+    font-family: "Verdana-regular";
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin h2-text {
+    font-size: 48px;
+    line-height: 130%;
+
+    @include _650 {
+        font-size: 38px;
+    }
+}
+
+@mixin h3-text {
+    font-size: 36px;
+    line-height: normal;
+
+    @include _650 {
+        font-size: 28px;
+    }
+}
+
+@mixin h4-text {
+    font-size: 28px;
+    line-height: normal;
+
+    @include _650 {
+        font-size: 24px;
+    }
+}
+
+@mixin h6-text {
+    font-size: 24px;
+    line-height: normal;
+
+    @include _650 {
+        font-size: 20px;
+    }
+}
+
+@mixin p-text {
+    font-size: 22px;
+    line-height: 130%;
+    letter-spacing: 0.66px;
+
+    @include _650 {
+        font-size: 18px;
+    }
+}

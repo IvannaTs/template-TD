@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Verdana-bold";
+  src: url("assets/fonts/verdana-bold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Verdana-regular";
+  src: url("assets/fonts/verdana.ttf") format("opentype");
+}

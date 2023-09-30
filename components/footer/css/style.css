@@ -1,0 +1,10 @@
+.footer {
+  margin: auto;
+  width: 95%;
+  border-top: 7px solid #D9D9D9;
+  padding: 30px 0;
+}
+
+.footer .information {
+  color: #D9D9D9;
+}

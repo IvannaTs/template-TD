@@ -1,0 +1,99 @@
+.about-company {
+  background: url('assets/img/bg-about-company.png');
+  @include background-properties;
+  padding: 80px 0 48px 0;
+
+  .inner {
+    .content {
+      padding-left: 80px;
+      max-width: 778px;
+
+      p {
+        color: $white;
+      }
+
+      p:nth-child(2) {
+        padding-top: 36px;
+      }
+
+      p:nth-child(3) {
+        padding: 15px 0;
+      }
+    }
+
+    .btn-wrap {
+      margin-top: 60px !important;
+      margin-bottom: 36px !important;
+
+      .btn {
+        display: block;
+        margin: auto;
+        padding: 0 40px;
+      }
+    }
+
+    .disclaimer {
+      font-size: 16px;
+      line-height: 130%;
+      padding: 0 24px;
+      color: $white;
+      text-align: center;
+    }
+  }
+}
+
+@include _1200 {
+  .about-company {
+    .inner {
+      .content {
+        padding-left: 0;
+        max-width: none;
+        width: 90%;
+      }
+
+      .disclaimer {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@include _650 {
+  .about-company {
+    padding: 60px 0 40px 0;
+
+    .inner {
+      .content {
+        width: 100%;
+
+        p:nth-child(2) {
+          padding-top: 24px;
+        }
+      }
+
+      .btn-wrap {
+        margin-top: 50px !important;
+        margin-bottom: 30px !important;
+
+        .btn {
+          padding: 0 35px;
+        }
+      }
+
+      .disclaimer {
+        font-size: 12px;
+      }
+    }
+  }
+}
+@include _468 {
+  .about-company {
+    .inner {
+      .btn-wrap {
+        .btn {
+          height: 78px;
+        }
+      }
+    }
+  }
+}

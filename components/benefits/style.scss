@@ -1,0 +1,153 @@
+.benefits {
+  padding: 80px 60px;
+  background-image: url('assets/img/bg-form.png');
+  @include background-properties;
+  color: $white;
+  .inner-flex {
+    justify-content: space-between;
+    .left-box {
+      width: 45%;
+      .item {
+        h4 {
+          @include Verdana-regular;
+        }
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 20px !important;
+        img {
+          width: 20%;
+          max-width: 100px;
+          min-width: 100px;
+          height: 100px;
+          object-fit: cover;
+          border-radius: 180px;
+        }
+        h4 {
+          width: 80%;
+          padding-left: 20px;
+        }
+      }
+      .item:nth-child(2) {
+        margin-top: 40px !important;
+      }
+    }
+    .right-box {
+      color: $dark;
+      width: 50%;
+      padding: 60px;
+      border-radius: 15px;
+      background: $white;
+    }
+    ol {
+      @include Verdana-regular;
+      font-size: 28px;
+      line-height: normal;
+      padding-top: 40px;
+      margin-left: 40px;
+      li {
+        list-style-position: outside;
+        padding-bottom: 15px;
+        h4 {
+          @include Verdana-regular;
+        }
+      }
+    }
+  }
+}
+
+@include _1440 {
+  .benefits {
+    padding: 80px 0;
+    .inner-flex {
+      .left-box {
+        width: 48%;
+    }
+    } 
+  }
+}
+@include _1200 {
+  .benefits {
+    .inner-flex {
+      .left-box {
+        width: 100%;
+        h3 {
+          text-align: center;
+        }
+      }
+      .right-box {
+        width: 100%;
+        margin-top: 30px !important;
+      }
+    }
+  }
+}
+@include _1024 {
+  .benefits {
+    .inner-flex {
+      .left-box {
+        .item {
+          margin-bottom: 15px !important;
+          img {
+            max-width: 90px;
+            min-width: 90px;
+            height: 90px;
+          }
+          h4 {
+            padding-left: 20px;
+          }
+        }
+        .item:nth-child(2) {
+          margin-top: 30px !important;
+        }
+      }
+      .right-box {
+        padding: 50px;
+      }
+      ol {
+        padding-top: 30px;
+        margin-left: 30px;
+        li {
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+@include _650 {
+  .benefits {
+    .inner-flex {
+      .left-box {
+        .item {
+          img {
+            width: 15%;
+            max-width: 80px;
+            min-width: 80px;
+            height: 80px;
+          }
+          h4 {
+            width: 80%;
+          }
+        }
+      }
+      .right-box {
+        padding: 30px;
+      }
+      ol {
+        font-size: 24px;
+      }
+    }
+  }
+}
+@include _468 {
+  .benefits {
+    .inner-flex {
+      .left-box {
+        .item {
+          h4 {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}

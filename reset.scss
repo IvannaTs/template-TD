@@ -1,0 +1,185 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+* {
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+hr,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  font-weight: normal !important;
+}
+
+/* all divs are relative by default*/
+// div {
+//   position: relative;
+// }
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article>*+* {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  padding: 0;
+  font: inherit;
+  border: none;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input,
+button,
+hr {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+ul,
+ol {
+  -webkit-margin-before: 0 !important;
+  margin-block-start: 0 !important;
+  -webkit-margin-after: 0 !important;
+  margin-block-end: 0 !important;
+  -webkit-padding-start: 0 !important;
+  padding-inline-start: 0 !important;
+}
+
+section {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+}
+
+body {
+  @include Verdana-regular;
+}
+
+.inner {
+  @include inner;
+}
+
+.container {
+  @include container;
+}
+
+.inner-flex {
+  @include inner-flex;
+}
+
+.title-gradient {
+  text-transform: uppercase;
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+  text-align: center;
+}
+
+.btn {
+  height: 60px;
+  background-color: $red;
+  color: $white;
+  font-size: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+h2 {
+  @include h2-text;
+  @include Verdana-bold;
+}
+
+h3 {
+  @include Verdana-bold;
+  @include h3-text;
+}
+
+h4 {
+  @include Verdana-bold;
+  @include h4-text;
+}
+
+h6 {
+  @include h6-text;
+}
+
+p {
+  @include p-text;
+  @include Verdana-regular;
+}
+.btn {
+  transition: all linear .4s;
+}
+.btn:hover {
+  opacity: .8;
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
+.btn:active {
+  opacity: 1;
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}

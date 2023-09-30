@@ -1,0 +1,244 @@
+.validation-form-wrap {
+  #validation-form {
+    position: relative;
+    z-index: 15;
+    border: 1px solid $light-grey;
+    background-image: url('assets/img/bg-form.png');
+    @include background-properties;
+    width: 510px;
+    padding: 48px 33px 61px 33px;
+
+    .title-wrap {
+      margin-bottom: 70px !important;
+
+      hr {
+        background: -webkit-gradient(linear, left top, right top, color-stop(10.22%, #1BB147), color-stop(104.68%, #018ED5));
+        background: -o-linear-gradient(left, #1BB147 10.22%, #018ED5 104.68%);
+        background: linear-gradient(90deg, #1BB147 10.22%, #018ED5 104.68%);
+        height: 4px;
+        width: 360px;
+        margin: auto
+      }
+
+      h3 {
+        text-transform: uppercase;
+        text-align: center;
+        color: $white;
+      }
+    }
+
+    input,
+    button {
+      display: block !important;
+      margin: auto;
+      width: 100%;
+      height: 60px;
+    }
+
+    input {
+      font-size: 24px;
+      padding-left: 14px;
+      margin-bottom: 24px !important;
+      background-color: $white;
+
+      ::-webkit-input-placeholder {
+        color: $light-grey;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      ::-moz-placeholder {
+        color: $light-grey;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      :-ms-input-placeholder {
+        color: $light-grey;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      ::-ms-input-placeholder {
+        color: $light-grey;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      ::placeholder {
+        color: $light-grey;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    button {
+      margin-top: 36px !important;
+    }
+
+    .iti {
+      display: block !important;
+      margin: auto;
+
+      .iti__selected-dial-code {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: $black;
+      }
+    }
+
+    .iti--allow-dropdown input::-webkit-input-placeholder {
+      color: transparent !important;
+    }
+
+    .iti--allow-dropdown input::-moz-placeholder {
+      color: transparent !important;
+    }
+
+    .iti--allow-dropdown input:-ms-input-placeholder {
+      color: transparent !important;
+    }
+
+    .iti--allow-dropdown input::-ms-input-placeholder {
+      color: transparent !important;
+    }
+
+    .iti--allow-dropdown input::placeholder {
+      color: transparent !important;
+    }
+
+    .iti__selected-flag {
+      padding: 0;
+      padding-right: 8px;
+
+      .iti__flag {
+        display: none;
+      }
+
+      .iti__arrow {
+        display: none;
+      }
+    }
+
+    .iti__country-list .iti__flag {
+      display: block;
+    }
+  }
+
+  .decor {
+    position: absolute;
+    z-index: 3;
+    @include background-properties;
+    background-image: url('assets/img/decor-form.png');
+    width: 510px;
+    height: 640px;
+  }
+
+  .decor.decor-first-layer {
+    -webkit-transform: rotate(3deg);
+        -ms-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+
+  .decor.decor-second-layer {
+    -webkit-transform: rotate(-3deg);
+        -ms-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+}
+
+@include _1200 {
+  .intro {
+    .validation-form-wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-top: 80px !important;
+    }
+  }
+}
+
+@include _650 {
+  .validation-form-wrap {
+    #validation-form {
+      width: 100%;
+      padding: 40px 30px;
+
+      .title-wrap {
+        margin-bottom: 40px !important;
+      }
+
+      input {
+
+        ::-webkit-input-placeholder {
+          font-size: 22px;
+        }
+
+        ::-moz-placeholder {
+          font-size: 22px;
+        }
+
+        :-ms-input-placeholder {
+          font-size: 22px;
+        }
+
+        ::-ms-input-placeholder {
+          font-size: 22px;
+        }
+
+        ::placeholder {
+          font-size: 22px;
+        }
+      }
+
+      button {
+        margin-top: 30px !important;
+      }
+
+      .iti {
+        .iti__selected-dial-code {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .decor {
+      position: absolute;
+      z-index: 3;
+      @include background-properties;
+      background-image: url('assets/img/decor-form.png');
+      width: 89%;
+      height: 560px;
+    }
+  }
+}
+@include _468 {
+  .validation-form-wrap {
+    #validation-form {
+      .title-wrap {
+        hr {
+          width: 100%;
+          height: 3px;
+        }
+      }
+    }
+  }
+}
